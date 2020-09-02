@@ -8,8 +8,10 @@ package com.maestro.learn.algorithms.sorting
   *
   * Space Complexity
   *   Worst Case: O(1)
+  *
+  * Slow and consistent, takes no space
   */
-object SelectionSorter {
+object SelectionSorter extends ISorter {
   def sort(arr: Array[Int]):Array[Int] = {
     for(i <- 0 until arr.length) {
       var min = arr(i)

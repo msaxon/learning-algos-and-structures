@@ -8,8 +8,10 @@ package com.maestro.learn.algorithms.sorting
   *
   * Space Complexity
   *   Worst Case: O(1)
+  *
+  * Good if the array is partially ordered already, otherwise slow
   */
-object InsertionSorter {
+object InsertionSorter extends ISorter {
   def sort(arr: Array[Int]): Array[Int] = {
     for(i <- 1 until arr.length) {
       val key = arr(i)
