@@ -2,6 +2,17 @@ package com.maestro.learn.algorithms.sorting
 
 import scala.util.control.Breaks._
 
+/**
+  * Time Complexity
+  *   Best Case: O(n log(n))
+  *   Average Case: O(n^2 / 2^p) ??? from wikipedia
+  *   Worst Case: O(n^2)
+  *
+  * Space Complexity
+  *   Worst Case: O(1)
+  *
+  * In space sort, surprisingly fast??
+  */
 object BubbleSorter extends ISorter {
   override def sort(arr: Array[Int]): Array[Int] = {
     breakable {
@@ -18,11 +29,5 @@ object BubbleSorter extends ISorter {
     }
 
     arr
-  }
-
-  private def swap(arr: Array[Int], i: Int, j: Int):Unit = {
-    val temp = arr(i)
-    arr(i) = arr(j)
-    arr(j) = temp
   }
 }
