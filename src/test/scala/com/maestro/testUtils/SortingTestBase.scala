@@ -11,11 +11,12 @@ abstract class SortingTestBase extends AnyWordSpec with Matchers {
   def collectionSize: Int = 100000
   def timeSetup: Boolean = false
 
-  private val timer = new UnitTestTimer(sorterName)
+  private val timer = new UnitTestTimer(sorterName, collectionSize)
 
   s"$sorterName" when {
     "called with an Array[Int]" should {
       "return a sorted Int array" in {
+        println("------------------------")
         val unSortedArr = Array(1,6,4,8,10,3,7,9,2,5)
         assert(CustomAsserts.assertInOrder(sorter.sort(unSortedArr)))
       }
